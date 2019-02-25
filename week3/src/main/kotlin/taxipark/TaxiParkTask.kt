@@ -49,7 +49,7 @@ fun TaxiPark.findTheMostFrequentTripDurationPeriod(): IntRange? {
         .maxBy { (_, durations) -> durations.size }
         ?.key
 
-    return bucket?.let { it ->
+    return bucket?.let {
         val start = it * 10
         val end = start + 9
         IntRange(start, end)
